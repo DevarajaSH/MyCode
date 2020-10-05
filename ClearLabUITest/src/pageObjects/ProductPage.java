@@ -8,12 +8,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilityFunctions.Utility;
+
 
 public class ProductPage 
 {
 	WebDriver driver;
 	WebDriverWait wait;
-	
+
 	public static String strProductAddedSuccessMessage = "";
 	public static String strProductFullName = "";
 	
@@ -90,6 +92,7 @@ public class ProductPage
 		catch(Exception e)
 		{
 			e.printStackTrace();
+			Utility.TakeScreenShot(driver, "./Screenshots/Failure_Productpage"+System.currentTimeMillis()+".jpeg");
 		}
 	}
 		

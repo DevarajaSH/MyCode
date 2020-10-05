@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1221" duration-ms="133318" started-at="2020-10-05T10:42:58Z" finished-at="2020-10-05T10:45:12Z">
+  <suite name="Suite1221" duration-ms="110771" started-at="2020-10-05T19:53:18Z" finished-at="2020-10-05T19:55:08Z">
     <groups>
     </groups>
-    <test name="ChromeTest" duration-ms="35546" started-at="2020-10-05T10:42:58Z" finished-at="2020-10-05T10:43:34Z">
+    <test name="ChromeTest" duration-ms="38182" started-at="2020-10-05T19:53:18Z" finished-at="2020-10-05T19:53:56Z">
       <class name="testCases.TC01_LoginAndAddProductToCart">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@475530b9]" name="setup" is-config="true" duration-ms="16655" started-at="2020-10-05T16:12:58Z" finished-at="2020-10-05T16:13:15Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@26be92ad]" name="setup" is-config="true" duration-ms="20381" started-at="2020-10-06T01:23:18Z" finished-at="2020-10-06T01:23:38Z">
           <params>
             <param index="0">
               <value>
@@ -18,19 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyLogin()[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@475530b9]" name="VerifyLogin" duration-ms="10542" started-at="2020-10-05T16:13:15Z" finished-at="2020-10-05T16:13:26Z">
+        <test-method status="PASS" signature="VerifyLogin()[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@26be92ad]" name="VerifyLogin" duration-ms="9479" started-at="2020-10-06T01:23:38Z" finished-at="2020-10-06T01:23:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@475530b9]" name="tearDown" is-config="true" duration-ms="8331" started-at="2020-10-05T16:13:26Z" finished-at="2020-10-05T16:13:34Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@26be92ad]" name="tearDown" is-config="true" duration-ms="8302" started-at="2020-10-06T01:23:48Z" finished-at="2020-10-06T01:23:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.TC01_LoginAndAddProductToCart -->
     </test> <!-- ChromeTest -->
-    <test name="FirefoxTest" duration-ms="47459" started-at="2020-10-05T10:43:34Z" finished-at="2020-10-05T10:44:21Z">
+    <test name="FirefoxTest" duration-ms="38646" started-at="2020-10-05T19:53:56Z" finished-at="2020-10-05T19:54:34Z">
       <class name="testCases.TC01_LoginAndAddProductToCart">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@42d80b78]" name="setup" is-config="true" duration-ms="22406" started-at="2020-10-05T16:13:34Z" finished-at="2020-10-05T16:13:56Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@1bce4f0a]" name="setup" is-config="true" duration-ms="19957" started-at="2020-10-06T01:23:56Z" finished-at="2020-10-06T01:24:16Z">
           <params>
             <param index="0">
               <value>
@@ -41,27 +41,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyLogin()[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@42d80b78]" name="VerifyLogin" duration-ms="13875" started-at="2020-10-05T16:13:56Z" finished-at="2020-10-05T16:14:10Z">
+        <test-method status="PASS" signature="VerifyLogin()[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@1bce4f0a]" name="VerifyLogin" duration-ms="8714" started-at="2020-10-06T01:24:16Z" finished-at="2020-10-06T01:24:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyLogin -->
-        <test-method status="FAIL" signature="tearDown()[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@42d80b78]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-05T16:14:10Z" finished-at="2020-10-05T16:14:10Z">
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@1bce4f0a]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-06T01:24:25Z" finished-at="2020-10-06T01:24:25Z">
           <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
               <![CDATA[Tried to run command without establishing a connection
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'INEMBL-8FC3TT2', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+System info: host: 'INEMBL-8FC3TT2', ip: '10.41.94.170', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200930150533, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 3620, moz:profile: C:\Users\devrajal\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9c176a1d-9fc3-43e0-80a3-c24b680473d4]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200930150533, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 22580, moz:profile: C:\Users\devrajal\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 042e6299-bdeb-4631-acee-b5ee28880b11]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'INEMBL-8FC3TT2', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+System info: host: 'INEMBL-8FC3TT2', ip: '10.41.94.170', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200930150533, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 3620, moz:profile: C:\Users\devrajal\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9c176a1d-9fc3-43e0-80a3-c24b680473d4
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200930150533, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 22580, moz:profile: C:\Users\devrajal\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 042e6299-bdeb-4631-acee-b5ee28880b11
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -74,7 +74,7 @@ Session ID: 9c176a1d-9fc3-43e0-80a3-c24b680473d4
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
 	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
-	at testCases.TC01_LoginAndAddProductToCart.tearDown(TC01_LoginAndAddProductToCart.java:63)
+	at testCases.TC01_LoginAndAddProductToCart.tearDown(TC01_LoginAndAddProductToCart.java:68)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -107,9 +107,9 @@ Session ID: 9c176a1d-9fc3-43e0-80a3-c24b680473d4
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.TC01_LoginAndAddProductToCart -->
     </test> <!-- FirefoxTest -->
-    <test name="EdgeTest" duration-ms="50281" started-at="2020-10-05T10:44:21Z" finished-at="2020-10-05T10:45:12Z">
+    <test name="EdgeTest" duration-ms="33893" started-at="2020-10-05T19:54:35Z" finished-at="2020-10-05T19:55:08Z">
       <class name="testCases.TC01_LoginAndAddProductToCart">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@6a4f787b]" name="setup" is-config="true" duration-ms="29944" started-at="2020-10-05T16:14:21Z" finished-at="2020-10-05T16:14:51Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@6a41eaa2]" name="setup" is-config="true" duration-ms="17588" started-at="2020-10-06T01:24:35Z" finished-at="2020-10-06T01:24:52Z">
           <params>
             <param index="0">
               <value>
@@ -120,11 +120,11 @@ Session ID: 9c176a1d-9fc3-43e0-80a3-c24b680473d4
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyLogin()[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@6a4f787b]" name="VerifyLogin" duration-ms="11864" started-at="2020-10-05T16:14:51Z" finished-at="2020-10-05T16:15:03Z">
+        <test-method status="PASS" signature="VerifyLogin()[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@6a41eaa2]" name="VerifyLogin" duration-ms="8171" started-at="2020-10-06T01:24:52Z" finished-at="2020-10-06T01:25:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@6a4f787b]" name="tearDown" is-config="true" duration-ms="8470" started-at="2020-10-05T16:15:03Z" finished-at="2020-10-05T16:15:12Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC01_LoginAndAddProductToCart@6a41eaa2]" name="tearDown" is-config="true" duration-ms="8130" started-at="2020-10-06T01:25:00Z" finished-at="2020-10-06T01:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

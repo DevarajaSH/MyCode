@@ -16,6 +16,7 @@ import factory.BrowserFactory;
 import pageObjects.LoginPage;
 import pageObjects.LogoutPage;
 import pageObjects.ProductPage;
+import utilityFunctions.Utility;
 
 public class TC01_LoginAndAddProductToCart 
 {
@@ -23,6 +24,7 @@ public class TC01_LoginAndAddProductToCart
 	public WebDriverWait dwait;
 	public LoginPage objLoginPage;
 	public LogoutPage objLogoutPage;
+	Utility objUtility;
 	
 	public ProductPage objProductPage;
 	public static String Logfilename;
@@ -49,7 +51,10 @@ public class TC01_LoginAndAddProductToCart
 			Assert.fail("Test Case Failed due to Username or Passwd is missing !!");
 		} 
 		else 
+		{
 			objLoginPage.loginApplication(uname, passwd);
+			Utility.TakeScreenShot(driver, "./Screenshots/Successful_Login"+System.currentTimeMillis()+".jpeg");
+		}
 	}
 
 	@AfterClass
@@ -64,6 +69,7 @@ public class TC01_LoginAndAddProductToCart
 		}
 		catch(UnhandledAlertException e)
 		{
+			Utility.TakeScreenShot(driver, "./Screenshots/Failure_AfterClass"+System.currentTimeMillis()+".jpeg");
 			BrowserFactory.quitApplication(driver);
 			Assert.fail("Test Case Failed due to Excpetion in Logout Application!!");
 		}
