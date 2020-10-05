@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.194">
+<testcase classname="Naviagate and Search query" name="Check user can naviagate to Orbitz URL" time="0.032">
+<failure message="The scenario has pending or undefined step(s)" type="io.cucumber.java.PendingException"><![CDATA[Given Open Chrome Browser...................................................pending
+When Naviagate to given URL.................................................skipped
+Then Verify Orbitz Home Page displayed......................................skipped
+]]></failure>
+</testcase>
+</testsuite>
