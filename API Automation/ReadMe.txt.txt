@@ -1,0 +1,1 @@
+call newman run ClearlabTestCollection.postman_collection.json -e ClearLabEnvironment.postman_environment.json -k --reporter-htmlextra -r htmlextra --reporter-htmlextra-showOnlyFails --reporter-htmlextra-export ClearLabAPI_Report.html

@@ -1,0 +1,456 @@
+{
+	"info": {
+		"_postman_id": "92127795-1682-46b4-ac96-4b66482450e0",
+		"name": "ClearlabTestCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TC01_GetWeatherRequestAPI",
+			"item": [
+				{
+					"name": "Get Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "693c47a5-ee8e-48d4-aa54-586b6fea3edf",
+								"exec": [
+									"if(pm.response.to.have.status(200))",
+									"{",
+									"    try ",
+									"    {",
+									"        var jsonData = JSON.parse(responseBody);",
+									"    }",
+									"    catch (err) {",
+									"        console.log(err);",
+									"        console.log(responseBody);",
+									"    }",
+									"",
+									"pm.test(\"Latitude Validation\", function () ",
+									"    {",
+									"        var jsonData = pm.response.json();",
+									"        pm.expect(jsonData.coord.lat).to.eql(51.51);",
+									"    });    ",
+									"",
+									"pm.test(\"Longitude Validation\", function () ",
+									"    {",
+									"        var jsonData = pm.response.json();",
+									"        pm.expect(jsonData.coord.lon).to.eql(-0.13);",
+									"    }); ",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{URL}}/data/2.5/weather?q={{Location}}&appid={{APPID_ClearLab}}",
+							"protocol": "https",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "{{Location}}"
+								},
+								{
+									"key": "appid",
+									"value": "{{APPID_ClearLab}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f9f7f555-7544-4ff9-ba4d-215e874a0a14",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8be9e62c-91bb-4e23-b455-af8538d19927",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "TC02_CreateNewWeatherStation",
+			"item": [
+				{
+					"name": "Register New Station",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f0cdd16d-22ed-41b7-ac10-56e7ee4b8429",
+								"exec": [
+									"function generate_random_string(string_length){",
+									"    let random_string = '';",
+									"    let random_ascii;",
+									"    for(let i = 0; i < string_length; i++) {",
+									"        random_ascii = Math.floor((Math.random() * 25) + 97);",
+									"        random_string += String.fromCharCode(random_ascii);",
+									"    }",
+									"    return random_string;",
+									"}",
+									"",
+									"var random=generate_random_string(3);",
+									"var StationDefaultName=\"Bangalore1_\";",
+									"var Station_Name=StationDefaultName.concat(random);",
+									"pm.globals.set(\"StationName\", Station_Name);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "2bcb3015-1ed6-4bc6-86f1-f5fe8be415eb",
+								"exec": [
+									"if(pm.response.to.have.status(200))",
+									"{",
+									"    try ",
+									"    {",
+									"        var jsonData = JSON.parse(responseBody);",
+									"    }",
+									"    catch (err) {",
+									"        console.log(err);",
+									"        console.log(responseBody);",
+									"    }",
+									"",
+									"var StationIDOne=jsonData.id;",
+									"var StationOneName=jsonData.name;",
+									"",
+									"postman.setEnvironmentVariable(\"StationID\", StationIDOne);",
+									"postman.setEnvironmentVariable(\"StationName\", StationOneName);",
+									"}",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"external_id\": \"SF_TEST001\",\r\n    \"name\": \"{{StationName}}\",\r\n    \"latitude\": 33.33,\r\n    \"longitude\": -111.43,\r\n    \"altitude\": 444\r\n}"
+						},
+						"url": {
+							"raw": "http://{{URL}}/data/3.0/stations?APPID={{APPID_Devaraj}}",
+							"protocol": "http",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"data",
+								"3.0",
+								"stations"
+							],
+							"query": [
+								{
+									"key": "APPID",
+									"value": "{{APPID_Devaraj}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5a20e33b-e9a6-4c10-9102-574209031a84",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "651785da-7354-4a43-8597-5d22820b0e03",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "TC03_GetWeatherStation",
+			"item": [
+				{
+					"name": "Get Stations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cc0abd07-bef4-424f-af33-15775f767769",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () ",
+									"{",
+									"        pm.response.to.have.status(200);",
+									"});",
+									"",
+									"if(pm.response.to.have.status(200))",
+									"{",
+									"    try ",
+									"    {",
+									"        var jsonData = JSON.parse(responseBody);",
+									"    }",
+									"    catch (err) {",
+									"        console.log(err);",
+									"        console.log(responseBody);",
+									"    }",
+									"",
+									"var StationIDOne=jsonData[0].id;",
+									"var StationOneName=jsonData[0].name;",
+									"",
+									"postman.setEnvironmentVariable(\"StationID\", StationIDOne);",
+									"postman.setEnvironmentVariable(\"StationName\", StationOneName);",
+									"}",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{MainURL}}/data/3.0/stations?APPID={{APPID_Devaraj}}",
+							"protocol": "http",
+							"host": [
+								"{{MainURL}}"
+							],
+							"path": [
+								"data",
+								"3.0",
+								"stations"
+							],
+							"query": [
+								{
+									"key": "APPID",
+									"value": "{{APPID_Devaraj}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "666bfda7-f87f-4a18-9932-c045b24f79a2",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "462a3ff3-d725-44c2-b70f-e399e331ce05",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "TC04_UpdateWeatherStation",
+			"item": [
+				{
+					"name": "Update Station",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cc0abd07-bef4-424f-af33-15775f767769",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () ",
+									"{",
+									"        pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"external_id\": \"SF_TEST001\",\r\n  \"name\": \"San Francisco Updated Station\",\r\n  \"latitude\": 37.80,\r\n  \"longitude\": -122.47,\r\n  \"altitude\": 143\r\n}"
+						},
+						"url": {
+							"raw": "http://{{MainURL}}/data/3.0/stations/{{StationID}}?appid={{APPID_Devaraj}}",
+							"protocol": "http",
+							"host": [
+								"{{MainURL}}"
+							],
+							"path": [
+								"data",
+								"3.0",
+								"stations",
+								"{{StationID}}"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "{{APPID_Devaraj}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "666bfda7-f87f-4a18-9932-c045b24f79a2",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "462a3ff3-d725-44c2-b70f-e399e331ce05",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "TC05_DeleteWeatherStation",
+			"item": [
+				{
+					"name": "Delete Weather Station One",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4a398abf-f248-47da-9ec1-c66dd7f67123",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"        pm.response.to.have.status(204);",
+									"    });",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/3.0/stations/{{StationID}}?APPID={{APPID_Devaraj}}",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"3.0",
+								"stations",
+								"{{StationID}}"
+							],
+							"query": [
+								{
+									"key": "APPID",
+									"value": "{{APPID_Devaraj}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f7c690c2-8e02-4646-bccd-cffd4a877fe6",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "7a8ec44f-084a-401c-9d31-15abe29d37bd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
