@@ -130,7 +130,7 @@
 							"script": {
 								"id": "2bcb3015-1ed6-4bc6-86f1-f5fe8be415eb",
 								"exec": [
-									"if(pm.response.to.have.status(200))",
+									"if(pm.response.to.have.status(201))",
 									"{",
 									"    try ",
 									"    {",
@@ -168,10 +168,10 @@
 							"raw": "{\r\n    \"external_id\": \"SF_TEST001\",\r\n    \"name\": \"{{StationName}}\",\r\n    \"latitude\": 33.33,\r\n    \"longitude\": -111.43,\r\n    \"altitude\": 444\r\n}"
 						},
 						"url": {
-							"raw": "http://{{URL}}/data/3.0/stations?APPID={{APPID_Devaraj}}",
+							"raw": "http://{{MainURL}}/data/3.0/stations?APPID={{APPID_Devaraj}}",
 							"protocol": "http",
 							"host": [
-								"{{URL}}"
+								"{{MainURL}}"
 							],
 							"path": [
 								"data",
@@ -405,12 +405,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://api.openweathermap.org/data/3.0/stations/{{StationID}}?APPID={{APPID_Devaraj}}",
+							"raw": "http://{{MainURL}}/data/3.0/stations/{{StationID}}?APPID={{APPID_Devaraj}}",
 							"protocol": "http",
 							"host": [
-								"api",
-								"openweathermap",
-								"org"
+								"{{MainURL}}"
 							],
 							"path": [
 								"data",
