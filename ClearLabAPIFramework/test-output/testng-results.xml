@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-10-21T00:18:09 IST" name="Default suite" finished-at="2020-10-21T00:18:14 IST" duration-ms="5070">
+    <groups>
+    </groups>
+    <test started-at="2020-10-21T00:18:09 IST" name="Default test" finished-at="2020-10-21T00:18:14 IST" duration-ms="5070">
+      <class name="testCase.TC01_GetWeatherRequestAPI">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCase.TC01_GetWeatherRequestAPI@4278a03f]" started-at="2020-10-21T00:18:09 IST" name="setup" finished-at="2020-10-21T00:18:09 IST" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="GetStation()[pri:1, instance:testCase.TC01_GetWeatherRequestAPI@4278a03f]" started-at="2020-10-21T00:18:09 IST" name="GetStation" finished-at="2020-10-21T00:18:12 IST" duration-ms="2976" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetStation -->
+        <test-method signature="CreateStation()[pri:2, instance:testCase.TC01_GetWeatherRequestAPI@4278a03f]" started-at="2020-10-21T00:18:12 IST" name="CreateStation" finished-at="2020-10-21T00:18:12 IST" duration-ms="489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateStation -->
+        <test-method signature="GetAllWeatherStations()[pri:3, instance:testCase.TC01_GetWeatherRequestAPI@4278a03f]" started-at="2020-10-21T00:18:12 IST" name="GetAllWeatherStations" finished-at="2020-10-21T00:18:13 IST" duration-ms="657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetAllWeatherStations -->
+        <test-method signature="UpdateStation()[pri:4, instance:testCase.TC01_GetWeatherRequestAPI@4278a03f]" started-at="2020-10-21T00:18:13 IST" name="UpdateStation" finished-at="2020-10-21T00:18:14 IST" duration-ms="721" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdateStation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.TC01_GetWeatherRequestAPI@4278a03f]" started-at="2020-10-21T00:18:14 IST" name="tearDown" finished-at="2020-10-21T00:18:14 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCase.TC01_GetWeatherRequestAPI -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
